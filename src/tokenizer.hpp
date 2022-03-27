@@ -22,6 +22,7 @@ private:
     string value;
 public:
     Token(string tt, string v);
+    Token();
     void print_token();
 };
 
@@ -37,13 +38,13 @@ public:
     vector<Token> tokens{};
     string        get_function_name();
     string        get_string();
+    string        get_number();
+    string        get_identifier();
     char          advance();
     char          advance_by(size_t len);
     void          print_tokens();
     bool          in_string = false;
     bool          in_function = false;
-
-
 };
 
 #endif
